@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card Detail Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-900 min-h-screen flex items-center relative justify-center"
+  >
+    <div class="max-w-md bg-white p-8 min-w-[500px] rounded-lg shadow-md">
+      <h2 class="text-3xl font-extrabold text-center mb-6">
+        Add Product Details
+      </h2>
+      <form action="/" method="post">
+        <div class="mb-4">
+          <label
+            for="product-name"
+            class="block text-sm font-medium text-gray-700"
+            >Product Name</label
+          >
+          <input
+            type="text"
+            id="product-name"
+            name="product_name"
+            required
+            class="mt-1 px-4 py-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="image-link"
+            class="block text-sm font-medium text-gray-700"
+            >Image Link</label
+          >
+          <input
+            type="text"
+            id="image-link"
+            name="image_link"
+            required
+            class="mt-1 px-4 py-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="description"
+            class="block text-sm font-medium text-gray-700"
+            >Description</label
+          >
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+            class="mt-1 px-4 py-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          ></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="price" class="block text-sm font-medium text-gray-700"
+            >Price</label
+          >
+          <input
+            type="text"
+            id="price"
+            name="price"
+            required
+            class="mt-1 px-4 py-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <button
+      id="viewProductsBtn"
+      class="bg-yellow-200 py-2 px-4 text-xl rounded-2xl absolute right-10 bottom-10 font-bold"
+    >
+      View Products
+    </button>
+  </body>
+  <script>
+    document
+      .getElementById("viewProductsBtn")
+      .addEventListener("click", function () {
+        window.location.href = "/post-data";
+      });
+  </script>
+</html>

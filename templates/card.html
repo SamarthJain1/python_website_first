@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-[#111827] relative text-white justify-center flex flex-wrap">
+    <button
+      id="reachHomePage"
+      class="absolute bg-white px-4 py-2 text-black rounded-2xl text-xl left-10 top-4"
+    >
+      Home Page
+    </button>
+    {% for item in data %}
+    <div class="flex p-12">
+      <div
+        class="flex bg-[#645ae8] justify-center gap-4 items-center py-4 px-3 rounded-xl flex-col overflow-hidden max-w-[350px]"
+      >
+        <div class="">
+          <img
+            class="w-[325px] h-[200px] rounded-2xl"
+            src="{{item.image_link}}"
+            alt=""
+          />
+        </div>
+        <p class="font-extrabold text-2xl">{{item.product_name}}</p>
+        <p class="font-bold text-xl">{{item.price}}</p>
+        <p class="text-[#b4ffe6] text-[17px]">{{item.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </body>
+  <script>
+    document
+      .getElementById("reachHomePage")
+      .addEventListener("click", function () {
+        window.location.href = "/";
+      });
+  </script>
+</html>
